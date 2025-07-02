@@ -1,0 +1,30 @@
+version: '3.8' # version du docker compose 
+
+services: # déclare tous les services (container) ici fastapi et caddy 
+  fastapi: # nom du service 
+    build: . #Dit à Docker de construire une image à partir du Dockerfile dans le dossier courant (.).
+    container_name: fastapi # Donne un nom explicite au conteneur, pour s'y référer facilement (docker ps, logs...).
+    expose: # Rend le port 8000 accessible aux autres conteneurs du même réseau (mais pas à l'extérieur de Docker).
+      - 8000 # Ici, Caddy pourra accéder à FastAPI via ce port.
+    networks: #Indique que ce service fait partie du réseau Docker nommé web, partagé avec Caddy pour qu'ils puissent communiquer.
+      - web
+
+  caddy:
+    image: caddy:latest #Utilise l'image officielle de Caddy depuis Docker Hub.
+    container_name: caddy
+    volumes: #Monte mon fichier Caddyfile local à l'endroit attendu par Caddy dans le conteneur (/etc/caddy/Caddyfile).
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data #Crée des volumes Docker pour stocker :/data : données comme les certificats TLS.
+      - caddy_config:/config #/config : la configuration interne de Caddy.
+    ports: #Expose les ports HTTP (80) et HTTPS (443) du conteneur vers l'extérieur (ton domaine et internet).
+      - "80:80"
+      - "443:443"
+    networks:
+      - web
+
+volumes: #Déclare les volumes nommés utilisés par Caddy pour :
+  caddy_data: #stocker ses certificats (caddy_data)
+  caddy_config: #sauvegarder sa config (caddy_config)
+
+networks:
+  web:
