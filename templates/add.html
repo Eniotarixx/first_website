@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Additionneur</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+      text-align: center;
+    }
+
+    input {
+      width: 50px;
+      text-align: center;
+      font-size: 1.2em;
+    }
+
+    span,
+    button {
+      font-size: 1.5em;
+      margin: 0 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Additionneur</h1>
+  <form action="/calculator/add" method="post">
+    <input type="number" name="val1">
+    <span>+</span>
+    <input type="number" name="val2">
+    <span>=</span>
+    <span>{{ resultat }}</span>
+    <button type="submit">Calculer</button>
+  </form>
+
+</body>
+
+</html>
