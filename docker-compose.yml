@@ -5,7 +5,7 @@ services: # déclare tous les services (container) ici fastapi et caddy
     build: . #Dit à Docker de construire une image à partir du Dockerfile dans le dossier courant (.).
     container_name: fastapi # Donne un nom explicite au conteneur, pour s'y référer facilement (docker ps, logs...).
     expose: # Rend le port 8000 accessible aux autres conteneurs du même réseau (mais pas à l'extérieur de Docker).
-      - 8000 # Ici, Caddy pourra accéder à FastAPI via ce port.
+      - 8000:8000 # Ici, Caddy pourra accéder à FastAPI via ce port.
     networks: #Indique que ce service fait partie du réseau Docker nommé web, partagé avec Caddy pour qu'ils puissent communiquer.
       - web
 
