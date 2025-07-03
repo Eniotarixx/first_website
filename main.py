@@ -1,12 +1,14 @@
 from fastapi import FastAPI, Form, Request  # permet de lire les données d’un formulaire HTML (<form>) envoyé en POST
 from fastapi.templating import Jinja2Templates  # moteur de template
 from fastapi.responses import HTMLResponse #La réponse que je renvoie à cette route est une page HTML, pas du JSON
+from fastapi.staticfiles import StaticFiles #help serve static file from directory
 from add import add  # ma logique métier dans mon autre fichier
 
 app = FastAPI()  # Crée une instance de l'application FastAPI, appelée app
 templates = Jinja2Templates(
     directory="templates"
 )  # Tous mes fichiers HTML sont dans le dossier templates/
+app.mount("/static", StaticFiles(directory="static"), name="static") # tells your FastAPI app to serve files from a folder called static
 
 
 @app.post("/calculator/add", response_class=HTMLResponse) # précise l'url et que j'utilise du HTML

@@ -1,116 +1,197 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Antoine Dagorn</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f8f8f8;
-      color: #333;
-    }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antoine Dagorn – Ingénieur IT & Data Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #222;
+            line-height: 1.6;
+        }
 
-    header {
-      background-color: #2c3e50;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-    }
+        header {
+            background-color: #3498db;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
 
-    main {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
+        header h1 {
+            margin: 0;
+            font-size: 48px;
+        }
 
-    h1 {
-      margin-bottom: 10px;
-    }
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
 
-    .section {
-      margin-bottom: 30px;
-    }
+        nav {
+            background: #f7f7f7;
+            text-align: center;
+            padding: 10px 0;
+        }
 
-    ul {
-      padding-left: 20px;
-    }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #3498db;
+            font-weight: 600;
+        }
 
-    footer {
-      text-align: center;
-      padding: 20px;
-    }
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
 
-    .btn {
-      background-color: #3498db;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 6px;
-      text-decoration: none;
-      font-size: 16px;
-    }
+        .section {
+            margin-bottom: 60px;
+        }
 
-    .btn:hover {
-      background-color: #2980b9;
-    }
-  </style>
+        h2 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+
+        .projects .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .skills ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills li {
+            background: #eee;
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        .contact a {
+            display: inline-block;
+            margin-right: 15px;
+            text-decoration: none;
+            color: #fff;
+            background: #3498db;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+
+        .contact a:hover {
+            background: #2c80b4;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #f7f7f7;
+            color: #888;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <header style="background-color: #3498db; color: white; padding: 40px 20px;">
+        <div
+            style="max-width: 900px; margin: auto; display: flex; align-items: center; flex-wrap: wrap; justify-content: center; gap: 20px;">
+            <div style="flex-shrink: 0; text-align: center;">
+                <img src="/static/avatar.png" alt="Avatar Antoine"
+                    style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);"
 
-  <header>
-    <h1>Antoine Dagorn</h1>
-    <p>International IT Project Manager · Data & AI Enthusiast</p>
-  </header>
+            </div>
+            <div style="text-align: center;">
+                <h1 style="margin: 0; font-size: 36px;">Antoine Dagorn</h1>
+                <p style="font-size: 16px; margin-top: 10px;">Ingénieur IT & Data Engineer – Passionné par les systèmes
+                    et la donnée</p>
+            </div>
+        </div>
+    </header>
 
-  <main>
-    <div class="section">
-      <h2>About Me</h2>
-      <p>
-        I’m an engineer from IMT Atlantique with 3 years of experience managing IT and digital transformation
-        projects — from ERP migration and IAM deployment to automation and data integration — in both corporate
-        (Wavestone, Naval Group) and startup environments (Rubio Verde). I’ve worked in Paris, New York,
-        Southeast Asia and Tokyo, and thrive in multicultural settings.
-      </p>
-      <p>
-        I enjoy turning ideas into impactful solutions, whether through project management, product delivery,
-        or building internal tools that make teams more efficient.
-      </p>
-    </div>
 
-    <div class="section">
-      <h2>Skills & Tools</h2>
-      <ul>
-        <li><strong>Project & Product Management:</strong> Planning, team coordination, Agile, Jira, Notion, QA</li>
-        <li><strong>Data:</strong> Azure Data Factory, Power BI, SQL (PostgreSQL), Python (pandas, matplotlib)</li>
-        <li><strong>Automation & Low-Code:</strong> Power Automate, Power Apps, Retool</li>
-        <li><strong>Development:</strong> Python, Java, clustering algorithms (KMeans, must-link constraints)</li>
-        <li><strong>Languages:</strong> French (native), English (fluent, IELTS 7.5), Japanese (intermediate)</li>
-      </ul>
-    </div>
+    <nav>
+        <a href="#about">À propos</a>
+        <a href="#projects">Projets</a>
+        <a href="#skills">Compétences</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-    <div class="section">
-      <h2>What I'm Looking For</h2>
-      <p>
-        I’m open to international opportunities — VIE, freelance, or full-time — in IT, data, or product-related roles.
-        I’m especially interested in tech-driven environments where innovation, purpose, and cross-cultural
-        collaboration meet.
-      </p>
-    </div>
+    <main>
+        <section id="about" class="section">
+            <h2>À propos</h2>
+            <p>Jeune ingénieur diplômé d’IMT Atlantique, j’ai réalisé 3 années d’alternance chez Wavestone sur des
+                projets IT structurants (ERP RH, IAM, migration de données, mission à New York).
+                J’ai ensuite rejoint une startup à Bangkok pour contribuer au lancement d’un produit mobile, tout en
+                structurant les aspects financiers et techniques de l’entreprise.</p>
+        </section>
 
-    <div class="section">
-      <h2>Let's Connect</h2>
-      <p>
-        📧 <a href="mailto:antoine.dagorn@outlook.com">antoine.dagorn@outlook.com</a><br />
-        🔗 <a href="https://www.linkedin.com/in/antoinedagorn" target="_blank">linkedin.com/in/antoinedagorn</a>
-      </p>
-    </div>
-  </main>
-  
+
+
+        <section id="projects" class="section projects">
+            <h2>Projets</h2>
+            <div class="card">
+                <h3>DreamFrame</h3>
+                <p>Génère un portrait stylisé à partir d’un selfie avec Stable Diffusion. Projet personnel en cours de
+                    mise en ligne (FastAPI + Docker + EC2).</p>
+            </div>
+            <div class="card">
+                <h3>Ce site web</h3>
+                <p>Créé pour servir de portfolio et vitrine professionnelle. HTML/CSS, responsive, déployé avec Docker.
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="section skills">
+            <h2>Compétences</h2>
+            <ul>
+                <li>Python</li>
+                <li>SQL (PostgreSQL)</li>
+                <li>FastAPI</li>
+                <li>Docker</li>
+                <li>Azure Data Factory</li>
+                <li>Power BI</li>
+                <li>Power Automate</li>
+                <li>Retool</li>
+                <li>Jira</li>
+                <li>Anglais C1</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="section contact">
+            <h2>Contact</h2>
+            <a href="https://www.linkedin.com/in/antoinedagorn/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/Eniotarixx" target="_blank">GitHub</a>
+        </section>
+    </main>
+
+    <footer>
+        © 2025 Antoine Dagorn – Tous droits réservés
+    </footer>
 </body>
 
 </html>
