@@ -1,3 +1,7 @@
+localhost {
+    reverse_proxy fastapi:8000
+}
+
 antoinedagorn.com {
     reverse_proxy fastapi:8000
 }
