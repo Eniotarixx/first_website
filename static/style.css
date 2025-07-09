@@ -1,108 +1,118 @@
-<style>
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background-color: #ffffff;
-            color: #222;
-            line-height: 1.6;
-        }
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #222;
+    line-height: 1.6;
+}
 
-        header {
-            background-color: #3498db;
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 48px;
-        }
+header h1 {
+    margin: 0;
+    font-size: 48px;
+}
 
-        header p {
-            font-size: 18px;
-            margin-top: 10px;
-        }
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+}
 
-        nav {
-            background: #f7f7f7;
-            text-align: center;
-            padding: 10px 0;
-        }
+nav {
+    background: #f7f7f7;
+    text-align: center;
+    padding: 10px 0;
+}
 
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #3498db;
-            font-weight: 600;
-        }
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #3498db;
+    font-weight: 600;
+}
 
-        main {
-            max-width: 900px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
 
-        .section {
-            margin-bottom: 60px;
-        }
+.section {
+    margin-bottom: 60px;
+}
 
-        h2 {
-            color: #3498db;
-            margin-bottom: 10px;
-        }
+h2 {
+    color: #3498db;
+    margin-bottom: 10px;
+}
 
-        .projects .card {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-        }
+.projects .card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
 
-        .card h3 {
-            margin-top: 0;
-        }
+.card h3 {
+    margin-top: 0;
+}
 
-        .skills ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
+.skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
-        .skills li {
-            background: #eee;
-            padding: 8px 16px;
-            border-radius: 20px;
-        }
+.skills li {
+    background: #eee;
+    padding: 8px 16px;
+    border-radius: 20px;
+}
 
-        .contact a {
-            display: inline-block;
-            margin-right: 15px;
-            text-decoration: none;
-            color: #fff;
-            background: #3498db;
-            padding: 10px 20px;
-            border-radius: 8px;
-            transition: background 0.3s ease;
-        }
+.contact a {
+    display: inline-block;
+    margin-right: 15px;
+    text-decoration: none;
+    color: #fff;
+    background: #3498db;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
 
-        .contact a:hover {
-            background: #2c80b4;
-        }
+.contact a:hover {
+    background: #2c80b4;
+}
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: #f7f7f7;
-            color: #888;
-            font-size: 14px;
-        }
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #f7f7f7;
+    color: #888;
+    font-size: 14px;
+}
 
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 36px;
-            }
-        }
-    </style>
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 36px;
+    }
+}
+
+input {
+    width: 50px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+span,
+button {
+    font-size: 1.5em;
+    margin: 0 10px;
+}
