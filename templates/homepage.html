@@ -20,80 +20,61 @@
             </div>
             <div style="text-align: center;">
                 <h1 style="margin: 0; font-size: 36px;">Antoine Dagorn</h1>
-                <p style="font-size: 16px; margin-top: 10px;">Ingénieur – Passionné par les
-                    systèmes
-                    et la donnée</p>
-            </div>        
+                <p style="font-size: 16px; margin-top: 10px;">{{ t['description'] }}</p>
+            </div>
         </div>
         <div class="lang-container">
-            <button class="lang-button" data-lang="fr" aria-label="Français">🇫🇷</button>
-            <button class="lang-button" data-lang="en" aria-label="English">🇺🇸</button>
+            <a class="lang-button" href="/?lang=fr" aria-label="Français">🇫🇷</a>
+            <a class="lang-button" href="/?lang=en" aria-label="English">🇺🇸</a>
         </div>
     </header>
 
 
     <nav>
-        <a href="#about">À propos</a>
-        <a href="#projects">Projets</a>
-        <a href="#skills">Compétences</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">{{ t['about'] }}</a>
+        <a href="#projects">{{ t['projects'] }}</a>
+        <a href="#skills">{{ t['skills'] }}</a>
+        <a href="#contact">{{ t['contact'] }}</a>
     </nav>
 
     <main>
         <section id="about" class="section">
-            <h2>À propos</h2>
-            <p>Jeune ingénieur diplômé d’IMT Atlantique, j’ai réalisé 3 années d’alternance chez Wavestone sur des
-                projets IT structurants (ERP RH, IAM, migration de données, mission à New York).
-                J’ai ensuite rejoint une startup à Bangkok pour contribuer au lancement d’un produit mobile, tout en
-                structurant les aspects financiers et techniques de l’entreprise.</p>
+            <h2>{{ t['about'] }}</h2>
+            <p>{{ t['about_text'] }}</p>
         </section>
 
 
 
         <section id="projects" class="section projects">
-            <h2>Projets</h2>
+            <h2>{{ t['projects'] }}</h2>
             <div class="card">
-                <h3>DreamFrame</h3>
-                <p>Génère un nouvel arrière-plan à partir d’un selfie à l’aide de Stable Diffusion.
-                    Détection de la personne via YOLO et SAM pour créer un masque, puis génération d’une image avec un
-                    pipeline Stable Diffusion personnalisé.</p>
+                <h3>{{ t['dream_frame_title'] }}</h3>
+                <p>{{ t['dream_frame_description'] }}</p>
             </div>
             <div class="card">
-                <h3>Ce site web</h3>
-                <p>Créé pour servir de portfolio. Déployé avec Docker sur AWS.
-                </p>
+                <h3>{{ t['website_title'] }}</h3>
+                <p>{{ t['website_description'] }}</p>
             </div>
         </section>
 
         <section id="skills" class="section skills">
-            <h2>Compétences</h2>
+            <h2>{{ t['skills'] }}</h2>
             <ul>
-                <li>Python</li>
-                <li>SQL (PostgreSQL)</li>
-                <li>FastAPI</li>
-                <li>Docker</li>
-                <li>Azure Data Factory</li>
-                <li>Power BI</li>
-                <li>Power Automate</li>
-                <li>Retool</li>
-                <li>Jira</li>
-                <li>Anglais C1</li>
-                <li>Gestion de projet</li>
-                <li>GCP - BigQuerry</li>
+                {% for skill in t['skills_list'] %}
+                <li>{{ skill }}</li>
+                {% endfor %}
             </ul>
         </section>
 
         <section id="contact" class="section contact">
-            <h2>Contact</h2>
+            <h2>{{ t['contact'] }}</h2>
             <a href="https://www.linkedin.com/in/antoinedagorn/" target="_blank">LinkedIn</a>
             <a href="https://github.com/Eniotarixx" target="_blank">GitHub</a>
             <a href="mailto:antoine.dagorn@outlook.com" target="_blank">Email</a>
         </section>
     </main>
 
-    <footer>
-        © 2025 Antoine Dagorn – Tous droits réservés
-    </footer>
+    <footer>{{ t['footer'] }}</footer>
 </body>
 
 </html>

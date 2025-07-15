@@ -12,6 +12,7 @@ COPY add.py .
 COPY main.py .
 COPY templates/ ./templates/
 COPY static/ ./static
+COPY translations/ ./translations
 
 EXPOSE 8000
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

@@ -1,0 +1,27 @@
+{
+    "description": "Engineer – Passionate about systems and data",
+    "about": "About",
+    "about_text": "I’m a recent engineering graduate from IMT Atlantique, I completed a 3-year apprenticeship at Wavestone working on major IT projects (HR ERP, IAM, data migration, and a mission in New York). I then joined a startup in Bangkok, where I contributed to the launch of a mobile product while helping structure the company's financial and technical foundations.", 
+    "projects": "Projects", 
+    "dream_frame_title": "DreamFrame",
+    "dream_frame_description": "Generates a new background from a selfie using Stable Diffusion. Detects the person with YOLO and SAM to create a mask, then generates a new background image with a custom Stable Diffusion pipeline.",
+    "website_title": "This website",
+    "website_description": "Created as a portfolio. Deployed with Docker on AWS.",
+    "skills": "Skills", 
+    "skills_list":[
+        "Python", 
+        "SQL (PostgreSQL)",
+        "FastAPI",
+        "Docker", 
+        "Azure Data Factory", 
+        "Power BI", 
+        "Power Automate", 
+        "Retool", 
+        "Jira", 
+        "Fluent english", 
+        "Project management", 
+        "GCP - BigQuerry"
+    ],
+    "contact": "Contact", 
+    "footer": "© 2025 Antoine Dagorn – All rights reserved"
+}
