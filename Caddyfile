@@ -5,3 +5,7 @@ localhost {
 antoinedagorn.com {
     reverse_proxy fastapi:8000
 }
+
+umami.antoinedagorn.com {
+    reverse_proxy umami:3000
+}

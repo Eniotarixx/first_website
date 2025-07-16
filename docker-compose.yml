@@ -25,28 +25,28 @@ services: # déclare tous les services (container) ici fastapi et caddy
       - web
 
   umami-db:
-  image: postgres:15
-  container_name: umami-db
-  restart: always
-  environment:
-    POSTGRES_DB: ${POSTGRES_DB}
-    POSTGRES_USER: ${POSTGRES_USER}
-    POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
-  volumes:
-    - umami-db-data:/var/lib/postgresql/data
+    image: postgres:15
+    container_name: umami-db
+    restart: always
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - umami-db-data:/var/lib/postgresql/data
 
   umami:
-  image: ghcr.io/umami-software/umami:postgresql-latest
-  container_name: umami
-  restart: always
-  environment:
-    DATABASE_URL: postgresql://umami:umami_password@umami-db:5432/umami
-    DATABASE_TYPE: postgresql
-    APP_SECRET: change_this_secret
-  ports:
-    - "3000:3000"
-  depends_on:
-    - umami-db
+    image: ghcr.io/umami-software/umami:postgresql-latest
+    container_name: umami
+    restart: always
+    environment:
+      DATABASE_URL: ${DATABASE_URL}
+      DATABASE_TYPE: ${DATABASE_TYPE}
+      APP_SECRET: ${APP_SECRET}
+    ports:
+      - "3000:3000"
+    depends_on:
+      - umami-db
 
 volumes: #Déclare les volumes nommés utilisés par Caddy pour :
   caddy_data: #stocker ses certificats (caddy_data)
