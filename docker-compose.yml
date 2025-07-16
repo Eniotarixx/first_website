@@ -34,6 +34,8 @@ services: # déclare tous les services (container) ici fastapi et caddy
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
       - umami-db-data:/var/lib/postgresql/data
+    networks:
+      - web
 
   umami:
     image: ghcr.io/umami-software/umami:postgresql-latest
@@ -47,6 +49,8 @@ services: # déclare tous les services (container) ici fastapi et caddy
       - "3000:3000"
     depends_on:
       - umami-db
+    networks:
+      - web
 
 volumes: #Déclare les volumes nommés utilisés par Caddy pour :
   caddy_data: #stocker ses certificats (caddy_data)
