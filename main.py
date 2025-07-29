@@ -8,8 +8,8 @@ import json
 
 app = FastAPI()  # Crée une instance de l'application FastAPI, appelée app
 
-templates = Jinja2Templates(directory="templates")  # Tous mes fichiers HTML sont dans le dossier templates/
 app.mount("/static", StaticFiles(directory="static"), name="static") # tells the FastAPI app to serve files from a folder called static
+templates = Jinja2Templates(directory="templates")  # Tous mes fichiers HTML sont dans le dossier templates/
 
 def load_translations(lang_code):
     path = os.path.join('translations', f'{lang_code}.json')

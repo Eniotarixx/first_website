@@ -1,80 +1,526 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Antoine Dagorn</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Recent graduate from IMT Atlantique, 3-year apprenticeship at Wavestone working on IT projects, joined a startup, contributed to a mobile product.">
+    <title>Antoine Dagorn | Portfolio</title>
+
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/static/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-    <script defer src="https://umami.antoinedagorn.com/script.js" data-website-id="cba6a5c7-bde6-4777-bffc-ee56df146066"></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <script defer src="https://umami.antoinedagorn.com/script.js"
+        data-website-id="cba6a5c7-bde6-4777-bffc-ee56df146066"></script>
+
+    <script src="/static/script.js" defer></script>
 </head>
 
-<body>
-    <header style="background-color: #3498db; color: white; padding: 40px 20px;">
-        <div
-            style="max-width: 900px; margin: auto; display: flex; align-items: center; flex-wrap: wrap; justify-content: center; gap: 20px;">
-            <div style="flex-shrink: 0; text-align: center;">
-                <img src="/static/avatar.png" alt="Avatar Antoine"
-                    style="width: 100px; height: 100px; object-fit: cover; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" />
-            </div>
-            <div style="text-align: center;">
-                <h1 style="margin: 0; font-size: 36px;">Antoine Dagorn</h1>
-                <p style="font-size: 16px; margin-top: 10px;">{{ t['description'] }}</p>
+<body class="min-h-screen">
+
+    <!-- Web Naviagtion-->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#me" class="text-xl font-bold gradient-text">Antoine Dagorn</a>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">{{
+                        t['about'] }}</a>
+                    <a href="#projects"
+                        class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">{{
+                        t['projects'] }}</a>
+                    <a href="#skills"
+                        class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">{{ t['skills']
+                        }}</a>
+                    <a href="#contact"
+                        class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium">{{ t['contact']
+                        }}</a>
+
+                    <a href="/?lang=fr" class="nav-link" aria-label="Français">🇫🇷</a>
+                    <a href="/?lang=en" class="nav-link" aria-label="English">🇺🇸</a>
+                </div>
+
+                <!-- Burguer Menu -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-toggle" class="text-gray-500 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
-        <div class="lang-container">
-            <a class="lang-button" href="/?lang=fr" aria-label="Français">🇫🇷</a>
-            <a class="lang-button" href="/?lang=en" aria-label="English">🇺🇸</a>
+
+        <!-- Mobile Navigation Called by JS script when burger menu clicked-->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{{
+                    t['about'] }}</a>
+                <a href="#projects"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{{
+                    t['projects'] }}</a>
+                <a href="#skills"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{{
+                    t['skills'] }}</a>
+                <a href="#contact"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">{{
+                    t['contact'] }}</a>
+
+                <a href="/?lang=fr"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                    aria-label="Français">🇫🇷</a>
+                <a href="/?lang=en"
+                    class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                    aria-label="English">🇺🇸</a>
+            </div>
         </div>
-    </header>
-
-
-    <nav>
-        <a href="#about">{{ t['about'] }}</a>
-        <a href="#projects">{{ t['projects'] }}</a>
-        <a href="#skills">{{ t['skills'] }}</a>
-        <a href="#contact">{{ t['contact'] }}</a>
     </nav>
 
-    <main>
-        <section id="about" class="section">
-            <h2>{{ t['about'] }}</h2>
-            <p>{{ t['about_text'] }}</p>
-        </section>
+    <!-- Me Section-->
+    <section id="me" class="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
 
+                <div class="md:w-1/2 flex justify-center ">
+                    <div class="relative">
+                        <div
+                            class="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full opacity-10 absolute -inset-0 m-auto">
+                        </div>
+                        <div
+                            class="w-64 h-64 md:w-80 md:h-80 bg-white rounded-full shadow-xl flex items-center justify-center overflow-hidden">
+                            <img src="/static/avatar.png" alt="Avatar Antoine" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
 
-
-        <section id="projects" class="section projects">
-            <h2>{{ t['projects'] }}</h2>
-            <div class="card">
-                <h3>{{ t['dream_frame_title'] }}</h3>
-                <p>{{ t['dream_frame_description'] }}</p>
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                        {{ t['hi'] }} <span class="gradient-text">Antoine</span>
+                        </span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-6">{{ t['description'] }}</p>
+                    <div class="flex space-x-4">
+                        <a href="#contact"
+                            class="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-md font-medium hover:opacity-90 transition duration-300">{{
+                            t['get_in_touch'] }}</a>
+                        <a href="#projects"
+                            class="border border-gray-300 text-gray-700 px-6 py-3 rounded-md font-medium hover:bg-gray-50 transition duration-300">{{
+                            t['view_projects'] }}</a>
+                    </div>
+                </div>
             </div>
-            <div class="card">
-                <h3>{{ t['website_title'] }}</h3>
-                <p>{{ t['website_description'] }}</p>
+        </div>
+    </section>
+
+    <!-- About Section-->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- About title -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">{{ t['about_title'] }}</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
             </div>
-        </section>
 
-        <section id="skills" class="section skills">
-            <h2>{{ t['skills'] }}</h2>
-            <ul>
-                {% for skill in t['skills_list'] %}
-                <li>{{ skill }}</li>
-                {% endfor %}
-            </ul>
-        </section>
+            <!-- Text columns-->
 
-        <section id="contact" class="section contact">
-            <h2>{{ t['contact'] }}</h2>
-            <a href="https://www.linkedin.com/in/antoinedagorn/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/Eniotarixx" target="_blank">GitHub</a>
-            <a href="mailto:antoine.dagorn@outlook.com" target="_blank">Email</a>
-        </section>
-    </main>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        {{ t['about_text_1'] }}
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        {{ t['about_text_2'] }}
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        {{ t['about_text_3'] }}
+                    </p>
+                </div>
 
-    <footer>{{ t['footer'] }}</footer>
+                <!-- Grid Colums -->
+
+                <div class="md:w-1/2 bg-gray-50 rounded-xl p-8 shadow-sm">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                        <!-- 1 -->
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="text-blue-500 mb-4">
+                                <i class="fas fa-graduation-cap text-3xl"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ t['about_grid_1_1'] }}</h3>
+                            <p class="text-gray-600">{{ t['about_grid_1_2'] }}</p>
+                            <p class="text-gray-500 text-sm">{{ t['about_grid_1_3'] }}</p>
+                        </div>
+
+                        <!-- 2 -->
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="text-purple-500 mb-4">
+                                <i class="fas fa-briefcase text-3xl"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ t['about_grid_2_1'] }}</h3>
+                            <p class="text-gray-600">{{ t['about_grid_2_2'] }}</p>
+                            <p class="text-gray-500 text-sm">{{ t['about_grid_2_3'] }}</p>
+                        </div>
+
+                        <!-- 3 -->
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="text-blue-400 mb-4">
+                                <i class="fas fa-globe text-3xl"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ t['about_grid_3_1'] }}</h3>
+                            <p class="text-gray-600">{{ t['about_grid_3_2'] }}</p>
+                            <p class="text-gray-500 text-sm">{{ t['about_grid_3_3'] }}</p>
+                        </div>
+
+                        <!-- 4 -->
+                        <div class="bg-white p-6 rounded-lg shadow-sm">
+                            <div class="text-purple-400 mb-4">
+                                <i class="fas fa-rocket text-3xl"></i>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ t['about_grid_4_1'] }}</h3>
+                            <p class="text-gray-600">{{ t['about_grid_4_2'] }}</p>
+                            <p class="text-gray-500 text-sm">{{ t['about_grid_4_3'] }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Project title -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">{{ t['projects_title'] }}</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            </div>
+
+            <!-- Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- DreamFrame Proejct -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 flex items-center justify-center">
+                        <i class="fas fa-image text-6xl text-blue-500 opacity-70"></i>
+                    </div>
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">{{ t['dream_frame_title'] }}</h3>
+                        <p class="text-gray-600 mb-4">
+                            {{ t['dream_frame_description'] }}
+                        </p>
+
+                        <!-- Skills -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">{{
+                                t['dream_frame_skill_1'] }}</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">{{
+                                t['dream_frame_skill_2'] }}</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">
+                                {{ t['dream_frame_skill_3'] }}</span>
+                            <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">{{
+                                t['dream_frame_skill_4'] }}</span>
+                        </div>
+
+                        <!-- External likned -->
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-500 hover:text-blue-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="text-blue-500 hover:text-blue-700">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Website proejct -->
+                <div class="project-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-gradient-to-r from-blue-100 to-purple-100 flex items-center justify-center">
+                        <i class="fas fa-laptop-code text-6xl text-blue-500 opacity-70"></i>
+                    </div>
+
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">{{ t['website_title'] }}</h3>
+                        <p class="text-gray-600 mb-4">
+                            {{ t['website_description'] }}
+                        </p>
+
+                        <!-- Skills -->
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded">{{ t['website_skill_1']
+                                }}</span>
+                            <span class="text-xs bg-purple-100 text-purple-800 px-2 py-1 rounded">{{
+                                t['website_skill_2'] }}</span>
+                            <span class="text-xs bg-green-100 text-green-800 px-2 py-1 rounded">{{ t['website_skill_3']
+                                }}</span>
+                            <span class="text-xs bg-yellow-100 text-yellow-800 px-2 py-1 rounded">{{
+                                t['website_skill_4'] }}</span>
+                        </div>
+
+                        <!-- External Link -->
+                        <div class="flex space-x-3">
+                            <a href="#" class="text-blue-500 hover:text-blue-700">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://antoinedagorn.com" class="text-blue-500 hover:text-blue-700">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Skills section -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">{{ t['skill_title'] }}</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            </div>
+
+            <!-- Columns -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+                <!-- Skill 1-->
+                <div class="skill-pill bg-white p-6 rounded-xl shadow-sm text-center transition duration-300">
+                    <div class="text-blue-500 mb-3">
+                        <i class="fab fa-python text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">{{ t['skill_1'] }}</h3>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="skill-pill bg-white p-6 rounded-xl shadow-sm text-center transition duration-300">
+                    <div class="text-blue-600 mb-3">
+                        <i class="fas fa-database text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">{{ t['skill_2'] }}</h3>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="skill-pill bg-white p-6 rounded-xl shadow-sm text-center transition duration-300">
+                    <div class="text-green-500 mb-3">
+                        <i class="fas fa-server text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">{{ t['skill_3'] }}</h3>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="skill-pill bg-white p-6 rounded-xl shadow-sm text-center transition duration-300">
+                    <div class="text-blue-400 mb-3">
+                        <i class="fab fa-docker text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">{{ t['skill_4'] }}</h3>
+                </div>
+
+                <!-- Skill 5 -->
+                <div class="skill-pill bg-white p-6 rounded-xl shadow-sm text-center transition duration-300">
+                    <div class="text-blue-700 mb-3">
+                        <i class="fas fa-cloud text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">{{ t['skill_5'] }}</h3>
+                </div>
+
+                <!-- Skill 6 -->
+                <div class="skill-pill bg-white p-6 rounded-xl shadow-sm text-center transition duration-300">
+                    <div class="text-yellow-500 mb-3">
+                        <i class="fas fa-chart-line text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">{{ t['skill_6'] }}</h3>
+                </div>
+
+                <!-- Skill 7 -->
+                <div class="skill-pill bg-white p-6 rounded-xl shadow-sm text-center transition duration-300">
+                    <div class="text-red-500 mb-3">
+                        <i class="fas fa-robot text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">{{ t['skill_7'] }}</h3>
+                </div>
+
+                <!-- Skill 8 -->
+                <div class="skill-pill bg-white p-6 rounded-xl shadow-sm text-center transition duration-300">
+                    <div class="text-purple-500 mb-3">
+                        <i class="fas fa-tools text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">{{ t['skill_8'] }}</h3>
+                </div>
+
+                <!-- Skill 9 -->
+                <div class="skill-pill bg-white p-6 rounded-xl shadow-sm text-center transition duration-300">
+                    <div class="text-blue-300 mb-3">
+                        <i class="fab fa-jira text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">{{ t['skill_9'] }}</h3>
+                </div>
+
+                <!-- Skill 10 -->
+                <div class="skill-pill bg-white p-6 rounded-xl shadow-sm text-center transition duration-300">
+                    <div class="text-red-400 mb-3">
+                        <i class="fas fa-language text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">{{ t['skill_10'] }}</h3>
+                </div>
+
+                <!-- Skill 11 -->
+                <div class="skill-pill bg-white p-6 rounded-xl shadow-sm text-center transition duration-300">
+                    <div class="text-green-600 mb-3">
+                        <i class="fas fa-project-diagram text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">{{ t['skill_11'] }}</h3>
+                </div>
+
+                <!-- Skill 12 -->
+                <div class="skill-pill bg-white p-6 rounded-xl shadow-sm text-center transition duration-300">
+                    <div class="text-blue-800 mb-3">
+                        <i class="fas fa-cloud text-4xl"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">{{ t['skill_12'] }}</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-r from-blue-50 to-purple-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Contact title-->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">{{ t['contact_title'] }}</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto"></div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+
+                <div class="bg-gradient-to-r from-blue-500 to-purple-600 text-white p-10">
+                    <h3 class="text-2xl font-bold mb-6">{{ t['contact_information'] }}</h3>
+
+
+                    <!-- management space between info-->
+                    <div class="space-y-6">
+
+                        <!-- Email -->
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 pt-1">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold">Email</h4>
+                                <a href="mailto:antoine.dagorn@outlook.com"
+                                    class="text-blue-100 hover:text-white">antoine.dagorn@outlook.com</a>
+                            </div>
+                        </div>
+
+                        <!-- LinkedIn-->
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 pt-1">
+                                <i class="fab fa-linkedin text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold">LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/antoinedagorn/" target="_blank"
+                                    class="text-blue-100 hover:text-white">linkedin.com/in/antoinedagorn</a>
+                            </div>
+                        </div>
+
+                        <!-- GitHub-->
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 pt-1">
+                                <i class="fab fa-github text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-lg font-semibold">GitHub</h4>
+                                <a href="https://github.com/Eniotarixx" target="_blank"
+                                    class="text-blue-100 hover:text-white">github.com/Eniotarixx</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Let's connect link and icon -->
+                    <div class="mt-10">
+
+                        <h3 class="text-lg font-semibold mb-4">{{ t['connect'] }}</h3>
+
+                        <div class="flex justify-evenly">
+
+                            <a href="https://www.linkedin.com/in/antoinedagorn/" target="_blank"
+                                class="bg-white text-blue-600 p-3 rounded-full hover:bg-blue-100 transition duration-300">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+
+                            <a href="https://github.com/Eniotarixx" target="_blank"
+                                class="bg-white text-gray-800 p-3 rounded-full hover:bg-gray-100 transition duration-300">
+                                <i class="fab fa-github"></i>
+                            </a>
+
+                            <a href="mailto:antoine.dagorn@outlook.com"
+                                class="bg-white text-red-500 p-3 rounded-full hover:bg-red-100 transition duration-300">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-xl font-bold gradient-text">Antoine Dagorn</a>
+                    <p class="text-gray-400 mt-2">{{ t['footer_description'] }}</p>
+                </div>
+
+                <div class="flex space-x-6">
+
+                    <a href="https://www.linkedin.com/in/antoinedagorn/" target="_blank"
+                        class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+
+                    <a href="https://github.com/Eniotarixx" target="_blank"
+                        class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+
+                    <a href="mailto:antoine.dagorn@outlook.com"
+                        class="text-gray-400 hover:text-white transition duration-300">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; <span id="year"></span> {{ t['footer'] }}</p>
+            </div>
+
+        </div>
+    </footer>
+
+
 </body>
 
 </html>

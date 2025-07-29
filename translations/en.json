@@ -1,13 +1,66 @@
 {
-    "description": "Engineer – Passionate about systems and data",
+    "hi": "Hi, I'm",
+    "description": "An engineering graduate from IMT Atlantique with experience in IT projects and startup environments.",
+    "get_in_touch": "Get in Touch",
+    "view_projects": "View Projects",
+
     "about": "About",
-    "about_text": "I’m a recent engineering graduate from IMT Atlantique, I completed a 3-year apprenticeship at Wavestone working on major IT projects (HR ERP, IAM, data migration, and a mission in New York). I then joined a startup in Bangkok, where I contributed to the launch of a mobile product while helping structure the company's financial and technical foundations.", 
-    "projects": "Projects", 
+    "about_title": "About Me",
+    "about_text_1": "I'm a recent engineering graduate from IMT Atlantique with a passion for technology and problem-solving.", 
+    "about_text_2": "I completed a 3-year apprenticeship at Wavestone working on major IT projects including HR ERP, IAM, and data migration, with an exciting mission in New York.", 
+    "about_text_3": "I then joined a startup in Bangkok, where I contributed to the launch of a mobile product while helping structure the company's financial and technical foundations.",
+    
+    "about_grid_1_1": "Education",
+    "about_grid_1_2": "IMT Atlantique", 
+    "about_grid_1_3": "Engineering Degree", 
+
+    "about_grid_2_1": "Experience", 
+    "about_grid_2_2": "Wavestone", 
+    "about_grid_2_3": "3-year apprenticeship", 
+
+    "about_grid_3_1": "International", 
+    "about_grid_3_2": "New York & Bangkok", 
+    "about_grid_3_3": "Work experience", 
+
+    "about_grid_4_1": "Startup", 
+    "about_grid_4_2": "Mobile product launch", 
+    "about_grid_4_3": "Technical foundations", 
+    
+    "projects": "Projects",
+    "projects_title": "My Projects",
+
+
     "dream_frame_title": "DreamFrame",
     "dream_frame_description": "Generates a new background from a selfie using Stable Diffusion. Detects the person with YOLO and SAM to create a mask, then generates a new background image with a custom Stable Diffusion pipeline.",
-    "website_title": "This website",
-    "website_description": "Created as a portfolio. Deployed with Docker on AWS.",
+    "dream_frame_skill_1": "AI",
+    "dream_frame_skill_2": "Computer Vision",
+    "dream_frame_skill_3": "Stable Diffusion",
+    "dream_frame_skill_4": "YOLO",
+
+    "website_title": "Portfolio Website",
+    "website_description": "Created as a professional portfolio to showcase my work and skills. Deployed with Docker on AWS for reliability and scalability.",
+    "website_skill_1": "HTML/CSS",
+    "website_skill_2": "JavaScript",
+    "website_skill_3": "Docker",
+    "website_skill_4": "AWS",
+
     "skills": "Skills", 
+    "skill_title": "My Skills",
+
+    "skill_1": "Python",
+    "skill_2": "SQL (PostgreSQL)",
+    "skill_3": "FastAPI",
+    "skill_4": "Docker",
+    "skill_5": "Azure Data Factory",
+    "skill_6": "Power BI",
+    "skill_7": "Power Automate",
+    "skill_8": "Retool",
+    "skill_9": "Jira",
+    "skill_10": "Fluent English",
+    "skill_11": "Project Management",
+    "skill_12": "GCP - BigQuery",
+
+
     "skills_list":[
         "Python", 
         "SQL (PostgreSQL)",
@@ -20,8 +73,17 @@
         "Jira", 
         "Fluent english", 
         "Project management", 
-        "GCP - BigQuerry"
+        "GCP - BigQuerry", 
+        "PyTorch"
     ],
+
     "contact": "Contact", 
-    "footer": "© 2025 Antoine Dagorn – All rights reserved"
+    "contact_title": "Get In Touch",
+    "contact_information": "Contact Information", 
+
+    "connect": "Let's connect",
+
+
+    "footer_description": "Engineering graduate with passion for technology", 
+    "footer": "Antoine Dagorn. All rights reserved."
 }

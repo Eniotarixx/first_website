@@ -1,13 +1,67 @@
 {
-    "description": "Ingénieur – Passionné par les systèmes et la donnée",
+    "hi": "Hello, je m'appelle",
+    "description": "Diplômé de l’IMT Atlantique en informatique, réseaux et télécoms, avec une expérience en gestion de projets IT et en start-up.",
+    "get_in_touch": "Me contacter",
+    "view_projects": "Voir mes projets",
+
     "about": "À propos",
-    "about_text": "Jeune ingénieur diplômé d’IMT Atlantique, j’ai réalisé 3 années d’alternance chez Wavestone sur des projets IT structurants (ERP RH, IAM, migration de données, mission à New York). J’ai ensuite rejoint une startup à Bangkok pour contribuer au lancement d’un produit mobile, tout en structurant les aspects financiers et techniques de l’entreprise.", 
+    "about_title": "À Propos de Moi",
+    "about_text_1": "Je suis récemment diplômé de l’IMT Atlantique, passionné par les nouvelles technologies et la résolution de problèmes.", 
+    "about_text_2": "J’ai réalisé une alternance de trois ans chez Wavestone, où j’ai travaillé sur des projets IT, notamment la migration des données d’un ERP RH, le déploiement d’une solution IAM, ainsi qu’une mission de quatre mois à New York.", 
+    "about_text_3": "J’ai ensuite rejoint une startup à Bangkok, où j’ai contribué au développement d’un produit mobile, tout en participant à la structuration des fondations financières et techniques de l’entreprise.",  
+    
+    "about_grid_1_1": "Formation",
+    "about_grid_1_2": "IMT Atlantique", 
+    "about_grid_1_3": "Diplôme d’ingénieur", 
+
+    "about_grid_2_1": "Expérience", 
+    "about_grid_2_2": "Wavestone", 
+    "about_grid_2_3": "Alternance de 3 ans", 
+
+    "about_grid_3_1": "International", 
+    "about_grid_3_2": "New York, Bangkok, Tokyo", 
+    "about_grid_3_3": "Expérience professionnelle", 
+
+    "about_grid_4_1": "Start-up", 
+    "about_grid_4_2": "Lancement d’une appliaction mobile", 
+    "about_grid_4_3": "Fondations techniques",
+
     "projects": "Projets", 
+    "projects_title": "Mes Projets",
+
+
     "dream_frame_title": "DreamFrame",
     "dream_frame_description": "Génère un nouvel arrière-plan à partir d’un selfie à l’aide de Stable Diffusion. Détection de la personne via YOLO et SAM pour créer un masque, puis génération d’une image avec un pipeline Stable Diffusion personnalisé.",
+    "dream_frame_skill_1": "AI",
+    "dream_frame_skill_2": "Computer Vision",
+    "dream_frame_skill_3": "Stable Diffusion",
+    "dream_frame_skill_4": "YOLO",
+
+
     "website_title":"Ce site web",
-    "website_description": "Créé pour servir de portfolio. Déployé avec Docker sur AWS.",
+    "website_description": "Créé comme portfolio professionnel pour présenter mon travail et mes compétences. Déployé avec Docker sur AWS pour assurer fiabilité et scalabilité.",
+    "website_skill_1": "HTML/CSS",
+    "website_skill_2": "JavaScript",
+    "website_skill_3": "Docker",
+    "website_skill_4": "AWS",
+
     "skills": "Compétences", 
+    "skill_title": "Mes Compétences",
+
+    "skill_1": "Python",
+    "skill_2": "SQL (PostgreSQL)",
+    "skill_3": "FastAPI",
+    "skill_4": "Docker",
+    "skill_5": "Azure Data Factory",
+    "skill_6": "Power BI",
+    "skill_7": "Power Automate",
+    "skill_8": "Retool",
+    "skill_9": "Jira",
+    "skill_10": "Fluent English",
+    "skill_11": "Project Management",
+    "skill_12": "GCP - BigQuery",
+
+
     "skills_list":[
         "Python", 
         "SQL (PostgreSQL)",
@@ -20,8 +74,18 @@
         "Jira", 
         "Anglais C1", 
         "Gestion de projet", 
-        "GCP - BigQuerry"
+        "GCP - BigQuerry", 
+        "PyTorch"
     ],
+
+
     "contact": "Contact", 
-    "footer": "© 2025 Antoine Dagorn – Tous droits réservés"
+    "contact_title": "Entrer en contact",
+    "contact_information": "Me contacter", 
+
+    "connect": "Connectons nous",
+
+
+    "footer_description": "Diplômé en ingénierie passionné par les nouvelles technologies.", 
+    "footer": "Antoine Dagorn – Tous droits réservés"
 }
